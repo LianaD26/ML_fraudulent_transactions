@@ -1,4 +1,26 @@
 from pydantic import BaseModel
+from enum import Enum
+
+class J(str, Enum):
+    UY = "UY"
+    MX = "MX"
+    US = "US"
+    ES = "ES"
+    AR = "AR"
+    CA = "CA"
+    GB = "GB"   
+    UA = "UA"
+    CL = "CL"
+    CO = "CO"
+    IT = "IT"
+    GT = "GT"
+    PT = "PT"
+    CH = "CH"
+    TR = "TR"
+    FR = "FR"
+    KR = "KR"
+    AU = "AU"
+    BR = "BR"
 
 class TransactionInput(BaseModel):
     a: int
@@ -10,7 +32,7 @@ class TransactionInput(BaseModel):
     g: float
     h: int
     i: int
-    j: str
+    j: J
     k: float
     l: int
     m: int
